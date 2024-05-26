@@ -1,0 +1,24 @@
+
+
+<h1>Search GitHub Users</h1>
+<form (ngSubmit)="onSearch()">
+  <input type="text" [(ngModel)]="query" name="query" required>
+  <button (click)="clickedbutton()" type="submit">Search</button>
+</form>
+
+<div *ngIf="results">
+  <h2>Search Results</h2>
+  <div *ngFor="let user of results.items" class="user-result">
+    <div class="user-info">
+      <div>
+      <h3>User Image</h3>
+      <img [src]="user.avatar_url" alt="{{ user.login }}" class="user-avatar">
+      </div>
+      <div>
+      <h3>GitHub Username</h3>
+      <a [routerLink]="['/user', user.login]" class="user-link">{{ user.login }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+

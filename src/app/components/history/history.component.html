@@ -1,0 +1,30 @@
+
+
+
+<div>
+  <button (click)="clearAllHistory()">Clear All History</button>
+</div>
+
+<div *ngFor="let item of history$ | async; let i = index" class="history-item">
+  <div class="search-term">
+    <strong>{{ item.query }}</strong>
+    <button (click)="clearSearch(i)">Clear</button>
+  </div>
+  <div *ngIf="item.results.items.length > 0; else noResults">
+    <div *ngFor="let user of item.results.items" class="user-result">
+      <div class="user-info">
+        <div class="user-image-section">
+          <h3>User Image</h3>
+          <img [src]="user.avatar_url" alt="{{ user.login }}" class="user-avatar">
+        </div>
+        <div class="user-name-section">
+          <h3>GitHub Username</h3>
+          <a [routerLink]="['/user', user.login]" class="user-link">{{ user.login }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noResults>
+    <p>Search result not found</p>
+  </ng-template>
+</div>

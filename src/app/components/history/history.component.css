@@ -1,0 +1,82 @@
+.history-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-term {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.search-term button {
+  background-color: rgb(10, 191, 64);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-image-section,
+.user-name-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.user-link {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.user-info h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: red;
+}

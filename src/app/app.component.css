@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0b0b0b;
+  font-weight: bold;
+  margin-right:20px;
+}
+
+nav a.active {
+  color: #0056b3;
+}
+
+router-outlet {
+  margin: 20px;
+}

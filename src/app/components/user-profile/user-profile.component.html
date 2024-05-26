@@ -1,0 +1,7 @@
+<h1>User Profile</h1>
+<div *ngIf="user">
+  <h2>{{ user.login }}</h2>
+  <img [src]="user.avatar_url" alt="{{ user.login }}">
+  <p>{{ user.bio }}</p>
+  <a [href]="user.html_url" target="_blank">View on GitHub</a>
+</div>
